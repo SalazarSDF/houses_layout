@@ -1,0 +1,24 @@
+{
+  "name": "nexter_layout",
+  "version": "1.0.0",
+  "description": "Nexter webpage",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass sass/main.scss css/style.css -w",
+    "server": "live-server --wait=1000",
+    "compile": "node-sass sass/main.scss css/style.comp.css",
+    "prefix": "postcss --use autoprefixer -o css/style.prefix.css css/style.comp.css",
+    "compress": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build": "npm run compile && npm run prefix && npm run compress"
+  },
+  "author": "Salas",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "*",
+    "concat": "*",
+    "node-sass": "*",
+    "postcss": "*",
+    "postcss-cli": "*"
+  }
+}
+
